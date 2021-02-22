@@ -18,7 +18,7 @@ public class StoreDataApp {
 
             switch (option) {
                 case 1:
-                    System.out.println("Text: ");
+                    System.out.print("Text: ");
                     String text = scanner.nextLine();
 
                     storeMenu();
@@ -29,6 +29,10 @@ public class StoreDataApp {
 
                 case 2:
                     System.out.println("Get data");
+                    break;
+                case 3:
+                    repo = new FileRepo();
+                    repo.getById(2);
                     break;
             }
 
@@ -65,6 +69,7 @@ public class StoreDataApp {
         System.out.println("--- Store Data App ---");
         System.out.println("1 - save data");
         System.out.println("2 - get data");
+        System.out.println("3 - get by id");
         System.out.println("0 - stop");
     }
 }
